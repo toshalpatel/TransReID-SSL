@@ -1,5 +1,5 @@
 MODEL:
-  PRETRAIN_PATH: '../../model/vit_base_ics_cfs_lup.pth'
+  PRETRAIN_PATH: '../model/vit_base_ics_cfs_lup.pth'
   PRETRAIN_HW_RATIO: 2
   METRIC_LOSS_TYPE: 'triplet'
   IF_LABELSMOOTH: 'off'
@@ -23,7 +23,7 @@ INPUT:
 
 DATASETS:
   NAMES: ('market1501')
-  ROOT_DIR: ('/home/michuan.lh/datasets')
+  ROOT_DIR: ('/home/sdp/Lauretta/TransReID-SSL/data')
 
 DATALOADER:
   SAMPLER: 'softmax_triplet'
@@ -49,8 +49,8 @@ TEST:
   EVAL: True
   IMS_PER_BATCH: 256
   RE_RANKING: False
-  WEIGHT: ''
+  WEIGHT: '../model/transformer_120.pth'
   NECK_FEAT: 'before'
   FEAT_NORM: 'yes'
 
-OUTPUT_DIR: '../../log/transreid/market/vit_base_ics_cfs_lup_384'
+OUTPUT_DIR: '../log/transreid/market/vit_base_ics_cfs_lup_384'
