@@ -23,7 +23,7 @@ INPUT:
 
 DATASETS:
   NAMES: ('market1501')
-  ROOT_DIR: ('/home/sdp/Lauretta/TransReID-SSL/data')
+  ROOT_DIR: ('/home/sdp/LTest/TransReID-SSL/data')
 
 DATALOADER:
   SAMPLER: 'softmax_triplet'
@@ -49,7 +49,7 @@ TEST:
   EVAL: True
   IMS_PER_BATCH: 256
   RE_RANKING: False
-  WEIGHT: '../model/transformer_120.pth'
+  WEIGHT: '../model/ViT-S-16/transformer_120.pth'
   NECK_FEAT: 'before'
   FEAT_NORM: 'yes'
 
